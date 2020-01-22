@@ -248,6 +248,32 @@
 		.nav-sub-tree-hidden{
 			display: none;
 		}
+
+                .page-list {
+			height: 30px;
+			font-size: 12px;
+			display: flex;
+			justify-content:center;
+			align-items: center;
+			align-self: center;
+		}
+		.page-list span {
+			border: 1px solid gray;
+			border-radius: 4px;
+			width: 24px;
+			height: 24px;
+			margin: 0 4px;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+		}
+		.page-dark-mode {
+			background-color: #1e2125;
+		}
+		.page-light-mode {
+			color: #fff;
+			background-color: gray;
+		}
 	</style>
 </head>
 <body>
@@ -339,6 +365,18 @@
 			<div class="post-tag"><span class="tag">자바스크립트</span><span class="tag">react</span><span class="tag">gh-pages</span></div>
 			<div class="post-date">2020-01-21</div>
 			</article>
+                        <div class="page-list">
+					<span class="page-dark-mode">&lt;&lt;</span>
+					<span class="page-dark-mode">&lt;</span>
+					<span class="page-dark-mode">1</span>
+					<span class="page-dark-mode">2</span>
+					<span class="page-dark-mode">3</span>
+					<span class="page-dark-mode">4</span>
+					...
+					<span class="page-dark-mode">99</span>
+					<span class="page-dark-mode">&gt;</span>
+					<span class="page-dark-mode">&gt;&gt;</span>
+				</div>
                       </div>
 		</main>
 		<footer>footer</footer>
@@ -354,6 +392,7 @@
 			const tags = document.querySelectorAll(".tag");	// 태그
 			const postLine = document.querySelectorAll("main article > .post-line");
 			const articles = document.querySelectorAll("main article");
+			const pageList = document.querySelectorAll("main .page-list span");
 			const btnNavMenu = document.querySelectorAll(".nav-main-tree > div:last-child");
 			
 			Array.prototype.forEach.call(btnNavMenu, function(menu) {
@@ -404,7 +443,11 @@
                                 Array.prototype.forEach.call(articles, function(article) {
 					article.classList.toggle("article-dark-mode");
 					article.classList.toggle("article-light-mode");
-				});      
+				}); 
+                                Array.prototype.forEach.call(pageList, function(page) {
+					page.classList.toggle("page-dark-mode");
+					page.classList.toggle("page-light-mode");
+				});
 			});
 			
 		})();
