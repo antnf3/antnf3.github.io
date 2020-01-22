@@ -160,6 +160,13 @@
 			border-radius: 4px;
 			box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
 		}
+                .article-dark-mode {
+                        border-bottom: 1px solid #fff;
+                }
+                .article-light-mode {
+                        border-radius: 4px;
+                        box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);       
+                }
 		main > article > .post-title {
 			font-size: 20px;
 			font-weight: 700;
@@ -275,7 +282,7 @@
 </script>
 </div>
 			<div class="main-title">최근 글</div>
-			<article>
+			<article class="article-dark-mode">
 				<div class="post-title">학교종이 땡땡땡</div>
 				<div class="post-line post-line-dark-mode"></div>
 				<div class="post-desc">학교종이 땡댕땡 어서모이자 선생님이 우리를 그리다린다..학교종이</div>
@@ -287,42 +294,42 @@
 				</div>
 				<div class="post-date">2020-01-21</div>
 			</article>
-			<article>
+			<article class="article-dark-mode">
 			<div class="post-title">학교종이 땡땡땡</div>
 			<div class="post-line"></div>
 			<div class="post-desc">학교종이 땡댕땡 어서모이자 선생님이 우리를 그리다린다..학교종이</div>
 			<div class="post-tag"><span class="tag">자바스크립트</span><span class="tag">react</span><span class="tag">gh-pages</span></div>
 			<div class="post-date">2020-01-21</div>
 			</article>
-			<article>
+			<article class="article-dark-mode">
 			<div class="post-title">학교종이 땡땡땡</div>
 			<div class="post-line"></div>
 			<div class="post-desc">학교종이 땡댕땡 어서모이자 선생님이 우리를 그리다린다..학교종이</div>
 			<div class="post-tag"><span class="tag">자바스크립트</span><span class="tag">react</span><span class="tag">gh-pages</span></div>
 			<div class="post-date">2020-01-21</div>
 			</article>
-			<article>
+			<article class="article-dark-mode">
 			<div class="post-title">학교종이 땡땡땡</div>
 			<div class="post-line"></div>
 			<div class="post-desc">학교종이 땡댕땡 어서모이자 선생님이 우리를 그리다린다..학교종이</div>
 			<div class="post-tag"><span class="tag">자바스크립트</span><span class="tag">react</span><span class="tag">gh-pages</span></div>
 			<div class="post-date">2020-01-21</div>
 			</article>
-			<article>
+			<article class="article-dark-mode">
 			<div class="post-title">학교종이 땡땡땡</div>
 			<div class="post-line"></div>
 			<div class="post-desc">학교종이 땡댕땡 어서모이자 선생님이 우리를 그리다린다..학교종이</div>
 			<div class="post-tag"><span class="tag">자바스크립트</span><span class="tag">react</span><span class="tag">gh-pages</span></div>
 			<div class="post-date">2020-01-21</div>
 			</article>
-			<article>
+			<article class="article-dark-mode">
 			<div class="post-title">학교종이 땡땡땡</div>
 			<div class="post-line"></div>
 			<div class="post-desc">학교종이 땡댕땡 어서모이자 선생님이 우리를 그리다린다..학교종이</div>
 			<div class="post-tag"><span class="tag">자바스크립트</span><span class="tag">react</span><span class="tag">gh-pages</span></div>
 			<div class="post-date">2020-01-21</div>
 			</article>
-			<article>
+			<article class="article-dark-mode">
 			<div class="post-title">학교종이 땡땡땡</div>
 			<div class="post-line"></div>
 			<div class="post-desc">학교종이 땡댕땡 어서모이자 선생님이 우리를 그리다린다..학교종이</div>
@@ -342,7 +349,7 @@
 			const header  = document.querySelectorAll("header")[0];	//   header
 			const tags = document.querySelectorAll(".tag");	// 태그
 			const postLine = document.querySelectorAll("main > article > .post-line");
-			
+			const articles = document.querySelectorAll("main > article");
 			const btnNavMenu = document.querySelectorAll(".nav-main-tree > div:last-child");
 			
 			Array.prototype.forEach.call(btnNavMenu, function(menu) {
@@ -389,6 +396,11 @@
 					line.classList.toggle("post-line-dark-mode");
 					line.classList.toggle("post-line-light-mode");
 				});
+
+                                Array.prototype.forEach.call(articles, function(article) {
+					article.classList.toggle("article-dark-mode");
+					article.classList.toggle("article-light-mode");
+				});      
 			});
 			
 		})();
