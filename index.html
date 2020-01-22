@@ -1,457 +1,465 @@
 <!DOCTYPE html>
 <html>
-<head>
-	<meta charset="utf-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.8.2/css/all.min.css" />
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.8.2/css/all.min.css"
+    />
 
-	<title>cp-test</title>
-	<style>
-		body {
-			margin: 0;
-			padding: 0;
-			font-size: 16px;
-			overflow: hidden;
-			display: flex;
-			justify-content: center;
-		}
-		body,input,div,button,span,ul,li {
-			box-sizing: border-box;
-		}
-		ul,li {
-			margin: 0;
-			padding: 0;
-			list-style: none;
-		}
-		.dark-mode {
-			background-color: #0d0d0d;
-			color: #e7e7e7;
-		}
-		.light-mode {
-			background-color: #fff;
-			color: #000;
-		}
-		.container {
-			height: 100vh;
-			width: 100vw;
-			overflow-y: auto;
-		}
-		nav {
-			top:0px;
-			width: 250px;
-			height: 100vh;
-			color: #000;
-			overflow-y: auto;
-		}
-		@media (max-width: 1280px) {
-			nav {
-				position: fixed;
-				bottom:0px;
-				right: 0px;
-				margin-right: -250px;
-				transition: all 0.3s;
-				z-index:999;
-			}
-		}
-		@media (min-width: 1280px) {
-			.container {
-				width: 1280px;
-				display: grid;
-				grid-template-columns: 1fr 250px;
-				grid-template-rows: 50px 1fr 50px;
-			}
-			nav {
-				grid-area: 1/2/4/3;
-				position: sticky;
-			}
-			header {
-				grid-area: 1/1/2/2;
-			}
-			main {
-				grid-area: 2/1/3/2;
-			}
-			footer {
-				grid-area: 3/1/4/2;
-			}
-			.header-menu {
-				visibility: hidden;
-			}
-		}
-		
-		.nav-dark {
-			background-color: #fff;
-		}
-		.nav-light {
-			background-color: gray;
-		}
-		.nav-disable {
-			display: none;
-		}
-		.nav-visible {
-			margin-right: 0px;
-			transition: all 0.3s;
-		}
-		.nav-screen-visible {
-			position: absolute;
-			top:0px;
-			right:0px;
-			bottom: 0px;
-			left: 0px;
-			background-color: gray;
-			opacity: 0.5;
-		}
-		header {
-			height: 50px;
-			border-bottom: 1px solid gray;
-			display: flex;
-			align-items: center;
-			justify-content: space-between;
-			z-index: 2;
-		}
-		.header-dark {background-color: #1e2125;}
-		.header-light {background-color: #fff;}
-		.header-menu,.header-temp {
-			width: 50px;
-			height: 100%;
-		        display: flex;
-                        align-items: center;
-                        justify-content: center;
-		}
-		.header-title {
-			flex: 1;
-			text-align: center;
-		}
-		
-		main {
-			flex: 1;
-			display: flex;
-			flex-direction: column;
-		}
-		main > .main-header {
-			height: 200px;
-			background-image: url(https://wonism.github.io/static/reactjs-0cd37998fdd55154083a64432279fc80.jpg);
-		}
-		main > .main-ads {
-			height: 120px;
-			background-color: gray;
-                        overflow-x: auto;
-		}
-		main > .main-title {
-			height: 24px;
-			background-color: #fff;
-			padding: 0 10px;
-			color: #000;
-			font-size: 14px;
-			display: flex;
-			align-items: center;
-		}
+    <title>쿠팡마켓</title>
+    <style>
+      body {
+        margin: 0;
+        padding: 0;
+        font-size: 16px;
+        overflow: hidden;
+        display: flex;
+        justify-content: center;
+      }
+      body,
+      input,
+      div,
+      button,
+      span,
+      ul,
+      li {
+        box-sizing: border-box;
+      }
+      ul,
+      li {
+        margin: 0;
+        padding: 0;
+        list-style: none;
+      }
+      .dark-mode {
+        background-color: #0d0d0d;
+        color: #e7e7e7;
+      }
+      .light-mode {
+        background-color: #fff;
+        color: #000;
+      }
+      .container {
+        height: 100vh;
+        width: 100vw;
+        overflow-y: auto;
+      }
+      nav {
+        top: 0px;
+        width: 250px;
+        height: 100vh;
+        color: #000;
+        overflow-y: auto;
+      }
+      @media (max-width: 1280px) {
+        nav {
+          position: fixed;
+          bottom: 0px;
+          right: 0px;
+          margin-right: -250px;
+          transition: all 0.3s;
+          z-index: 999;
+        }
+      }
+      @media (min-width: 1280px) {
+        .container {
+          width: 1280px;
+          display: grid;
+          grid-template-columns: 1fr 250px;
+          grid-template-rows: 50px 1fr 50px;
+        }
+        nav {
+          grid-area: 1/2/4/3;
+          position: sticky;
+        }
+        header {
+          grid-area: 1/1/2/2;
+        }
+        main {
+          grid-area: 2/1/3/2;
+        }
+        footer {
+          grid-area: 3/1/4/2;
+        }
+        .header-menu {
+          visibility: hidden;
+        }
+      }
 
-                main > .features {
-                        display:flex;
-                        flex-direcion: row;
-                        flex-wrap: wrap;
-                        justify-content: center;
-}
-		main article {
-			margin: 5px 5px;
-			padding: 5px 5px;
-			background-color: transparent;
-                        width: 350p;
-		}
-                .article-dark-mode {
-                        border-bottom: 1px solid #fff;
-                }
-                .article-light-mode {
-                        border-radius: 4px;
-                        box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);       
-                }
-		main article > .post-title {
-			font-size: 20px;
-			font-weight: 700;
-			margin-top: 10px;
-		}
-		main article > .post-line {
-			height: 1px;
-			margin: 20px 0;
-		}
-		.post-line-dark-mode {
-			border-bottom: 1px solid #2b3040;
-		}
-		.post-line-light-mode {
-			border-bottom: 1px solid #dee2e6;
-		}
-		
-		main article > .post-desc {
-			font-size: 12px;
-			margin: 20px 0;
-		}
-		main article > .post-tag {
-			font-size: 10px;
-			display: flex;
-			flex-wrap: wrap;
-		}
-		.tag {
-			margin: 2px 2px;
-			padding: 2px 2px;
-			border-radius: 4px;
-		}
-		.tag-dark-mode {
-			background-color: #2b3040;
-			color: #707686;
-		}
-		.tag-light-mode {
-			background-color: #1c1e21;
-			color: #dadbdd;
-		}
-		main article > .post-date {
-			height: 20px;
-			font-size: 12px;
-			display:flex;
-			justify-content: flex-end;
-		}
-		
-		
-		
-		footer {
-			height: 50px;
-			border-top:1px solid gray;
-		}
-		
-		.nav-main-tree {
-			margin: 10px 10px;
-		}
-		.nav-main-tree > div {
-			display: inline-block;
-			cursor: pointer;
-		}
-		.nav-main-tree-plus {
-			width: 10px;
-			height: 10px;
-			background-image: url();
-		}
-		.nav-main-tree-minus {
-			width: 10px;
-			height: 10px;
-			background-image: url();
-		}
-		.nav-sub-tree {
-			margin-left: 24px;
-			margin-right: 4px;
-			padding-left: 5px;
-		}
-		.nav-sub-tree > div {
-			margin-top: 3px;
-			background-color: #f8f9fa;
-			border-radius: 3px;
-		}
-		.nav-sub-tree-hidden{
-			display: none;
-		}
+      .nav-dark {
+        background-color: #fff;
+      }
+      .nav-light {
+        background-color: gray;
+      }
+      .nav-disable {
+        display: none;
+      }
+      .nav-visible {
+        margin-right: 0px;
+        transition: all 0.3s;
+      }
+      .nav-screen-visible {
+        position: absolute;
+        top: 0px;
+        right: 0px;
+        bottom: 0px;
+        left: 0px;
+        background-color: gray;
+        opacity: 0.5;
+      }
+      header {
+        height: 50px;
+        border-bottom: 1px solid gray;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        z-index: 2;
+      }
+      .header-dark {
+        background-color: #1e2125;
+      }
+      .header-light {
+        background-color: #fff;
+      }
+      .header-menu,
+      .header-temp {
+        width: 50px;
+        height: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+      .header-title {
+        flex: 1;
+        text-align: center;
+      }
 
-                .page-list {
-			height: 40px;
-                        width: 280px;
-			font-size: 12px;
-			display: flex;
-			justify-content:center;
-			align-items: center;
-			align-self: center;
-		}
-		.page-list span {
-			border: 1px solid gray;
-			border-radius: 4px;
-			width: 30px;
-			height: 30px;
-			margin: 2px 2px;
-			display: flex;
-			justify-content: center;
-			align-items: center;
-		}
-		.page-dark-mode {
-			background-color: #1e2125;
-		}
-		.page-light-mode {
-			color: #fff;
-			background-color: gray;
-		}
-	</style>
-</head>
-<body>
-	<div class="container dark-mode">
-		<nav class="nav-dark">
-			<ul>
-				<li>
-					<div class="nav-main-tree">
-						<div class="nav-main-tree-plus"></div>
-						<div>메뉴</div>
-					</div>
-					<article class="nav-sub-tree nav-sub-tree-hidden">
-						<div><span>ㄴ</span><span>aaaa</span></div>
-						<div><span>ㄴ</span><span>aaaa</span></div>
-					</article>
-				</li>
-			</ul>
-                <a href="https://coupa.ng/bmYA5y" target="_blank"><img src="https://ads-partners.coupang.com/banners/117089?subId=&traceId=V0-301-879dd1202e5c73b2-I117089&w=200&h=200" alt=""></a>
-                </nav>
-		<div class="nav-screen"></div>
-		<header class="header-dark">
-			<div class="header-temp header-temp-dark"><i class="fas fa-circle fa-2x"></i></div>
-			<div class="header-title"><span>Right Menu-Responsive</span></div>
-			<div class="header-menu header-menu-dark"><i class="fas fa-bars fa-2x"></i></div>
-		</header>
-		<main>
-			<div class="main-header">
-          <iframe src="https://coupa.ng/bmX220" width="100%" height="75" frameborder="0" scrolling="no"></iframe> 
-</div>
-			<div class="main-ads">
-<script src="https://ads-partners.coupang.com/g.js"></script>
-<script>
-	new PartnersCoupang.G({ id:116870 });
-</script>
-</div>
-			<div class="main-title">최근 글</div>
-                        <div class="features">
-			<article class="article-dark-mode">
-				<div class="post-title">학교종이 땡땡땡</div>
-				<div class="post-line post-line-dark-mode"></div>
-				<div class="post-desc">학교종이 땡댕땡 어서모이자 선생님이 우리를 그리다린다..학교종이</div>
-				<div class="post-tag">
-					<span class="tag tag-dark-mode">자바스크립트</span>
-					<span class="tag tag-dark-mode">자바스크립트</span>
-					<span class="tag tag-dark-mode">자바스크립트</span>
-					<span class="tag tag-dark-mode">자바스크립트</span>
-				</div>
-				<div class="post-date">2020-01-21</div>
-			</article>
-			<article class="article-dark-mode">
-			<div class="post-title">학교종이 땡땡땡</div>
-			<div class="post-line"></div>
-			<div class="post-desc">학교종이 땡댕땡 어서모이자 선생님이 우리를 그리다린다..학교종이</div>
-			<div class="post-tag"><span class="tag">자바스크립트</span><span class="tag">react</span><span class="tag">gh-pages</span></div>
-			<div class="post-date">2020-01-21</div>
-			</article>
-			<article class="article-dark-mode">
-			<div class="post-title">학교종이 땡땡땡</div>
-			<div class="post-line"></div>
-			<div class="post-desc">학교종이 땡댕땡 어서모이자 선생님이 우리를 그리다린다..학교종이</div>
-			<div class="post-tag"><span class="tag">자바스크립트</span><span class="tag">react</span><span class="tag">gh-pages</span></div>
-			<div class="post-date">2020-01-21</div>
-			</article>
-			<article class="article-dark-mode">
-			<div class="post-title">학교종이 땡땡땡</div>
-			<div class="post-line"></div>
-			<div class="post-desc">학교종이 땡댕땡 어서모이자 선생님이 우리를 그리다린다..학교종이</div>
-			<div class="post-tag"><span class="tag">자바스크립트</span><span class="tag">react</span><span class="tag">gh-pages</span></div>
-			<div class="post-date">2020-01-21</div>
-			</article>
-			<article class="article-dark-mode">
-			<div class="post-title">학교종이 땡땡땡</div>
-			<div class="post-line"></div>
-			<div class="post-desc">학교종이 땡댕땡 어서모이자 선생님이 우리를 그리다린다..학교종이</div>
-			<div class="post-tag"><span class="tag">자바스크립트</span><span class="tag">react</span><span class="tag">gh-pages</span></div>
-			<div class="post-date">2020-01-21</div>
-			</article>
-			<article class="article-dark-mode">
-			<div class="post-title">학교종이 땡땡땡</div>
-			<div class="post-line"></div>
-			<div class="post-desc">학교종이 땡댕땡 어서모이자 선생님이 우리를 그리다린다..학교종이</div>
-			<div class="post-tag"><span class="tag">자바스크립트</span><span class="tag">react</span><span class="tag">gh-pages</span></div>
-			<div class="post-date">2020-01-21</div>
-			</article>
-			<article class="article-dark-mode">
-			<div class="post-title">학교종이 땡땡땡</div>
-			<div class="post-line"></div>
-			<div class="post-desc">학교종이 땡댕땡 어서모이자 선생님이 우리를 그리다린다..학교종이</div>
-			<div class="post-tag"><span class="tag">자바스크립트</span><span class="tag">react</span><span class="tag">gh-pages</span></div>
-			<div class="post-date">2020-01-21</div>
-			</article>
-                        <div class="page-list">
-					<span class="page-dark-mode">&lt;&lt;</span>
-					<span class="page-dark-mode">&lt;</span>
-					<span class="page-dark-mode">1</span>
-					<span class="page-dark-mode">2</span>
-					<span class="page-dark-mode">3</span>
-					<span class="page-dark-mode">4</span>
-					...
-					<span class="page-dark-mode">99</span>
-					<span class="page-dark-mode">&gt;</span>
-					<span class="page-dark-mode">&gt;&gt;</span>
-				</div>
-                      </div>
-		</main>
-		<footer>footer</footer>
-	</div>
-	<script type="text/javascript">
-		(function() {
-			const btnMenu = document.querySelectorAll(".header-menu")[0];	// 메뉴버튼
-			const navigation = document.querySelectorAll("nav")[0];	//  사이드 메뉴
-			const navScreen = document.querySelectorAll(".nav-screen")[0];	//  화면가림막
-			const darkMode = document.querySelectorAll(".header-temp")[0];	// dark,light 모드버튼  
-			const container = document.querySelectorAll(".container")[0];	//  container
-			const header  = document.querySelectorAll("header")[0];	//   header
-			const tags = document.querySelectorAll(".tag");	// 태그
-			const postLine = document.querySelectorAll("main article > .post-line");
-			const articles = document.querySelectorAll("main article");
-			const pageList = document.querySelectorAll("main .page-list span");
-			const btnNavMenu = document.querySelectorAll(".nav-main-tree > div:last-child");
-			
-			Array.prototype.forEach.call(btnNavMenu, function(menu) {
-				menu.addEventListener("click", function() {
-					const menuIcon = menu.previousElementSibling;
-					menuIcon.classList.toggle("nav-main-tree-plus");
-					menuIcon.classList.toggle("nav-main-tree-minus");
-					
-					const subTreeMenu = menu.parentElement.nextElementSibling;
-					subTreeMenu.classList.toggle("nav-sub-tree-hidden");
-				});
-			});
-			
-			// 메뉴 toggle 함수
-			function menuToggle() {
-				navigation.classList.toggle("nav-visible");
-				navScreen.classList.toggle("nav-screen-visible");
-				
-			}
-			
-			// 메뉴버튼 클릭 이벤트
-			btnMenu.addEventListener("click", menuToggle);
-			// 사이드메뉴visible 될때 화면 막는 div클릭 이벤트
-			navScreen.addEventListener("click", menuToggle);
-			// dark,light 모드 전환 함수
-			darkMode.addEventListener("click", function() {
-				btnMenu.classList.toggle("header-menu-dark");
-				btnMenu.classList.toggle("header-menu-light");
-				darkMode.classList.toggle("header-temp-dark");
-				darkMode.classList.toggle("header-temp-light");
-				container.classList.toggle("dark-mode");
-				container.classList.toggle("light-mode");
-				navigation.classList.toggle("nav-dark");
-				navigation.classList.toggle("nav-light");
-				header.classList.toggle("header-dark");
-				header.classList.toggle("header-light");
-				
-				Array.prototype.forEach.call(tags, function(tag) {
-					tag.classList.toggle("tag-dark-mode");
-					tag.classList.toggle("tag-light-mode");
-				});
-				
-				Array.prototype.forEach.call(postLine, function(line) {
-					line.classList.toggle("post-line-dark-mode");
-					line.classList.toggle("post-line-light-mode");
-				});
+      main {
+        flex: 1;
+        display: flex;
+        flex-direction: column;
+      }
+      main > .main-header {
+        height: 200px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+      }
 
-                                Array.prototype.forEach.call(articles, function(article) {
-					article.classList.toggle("article-dark-mode");
-					article.classList.toggle("article-light-mode");
-				}); 
-                                Array.prototype.forEach.call(pageList, function(page) {
-					page.classList.toggle("page-dark-mode");
-					page.classList.toggle("page-light-mode");
-				});
-			});
-			
-		})();
-	</script>
-</body>
+      main > .main-ads {
+        height: 140px;
+        background-color: gray;
+        overflow-x: auto;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+      main > .main-title {
+        height: 24px;
+        background-color: #fff;
+        padding: 0 10px;
+        color: #000;
+        font-size: 14px;
+        display: flex;
+        align-items: center;
+      }
+
+      main > .features {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center;
+      }
+      main article {
+        margin: 5px 5px;
+        padding: 5px 5px;
+        background-color: transparent;
+        width: 120px;
+        height: 240px;
+      }
+      .article-dark-mode {
+        border-bottom: 1px solid #fff;
+      }
+      .article-light-mode {
+        border-radius: 4px;
+        box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+      }
+      main article > .post-title {
+        font-size: 20px;
+        font-weight: 700;
+        margin-top: 10px;
+      }
+      main article > .post-line {
+        height: 1px;
+        margin: 20px 0;
+      }
+      .post-line-dark-mode {
+        border-bottom: 1px solid #2b3040;
+      }
+      .post-line-light-mode {
+        border-bottom: 1px solid #dee2e6;
+      }
+
+      main article > .post-desc {
+        font-size: 12px;
+        margin: 20px 0;
+      }
+      main article > .post-tag {
+        font-size: 10px;
+        display: flex;
+        flex-wrap: wrap;
+      }
+      .tag {
+        margin: 2px 2px;
+        padding: 2px 2px;
+        border-radius: 4px;
+      }
+      .tag-dark-mode {
+        background-color: #2b3040;
+        color: #707686;
+      }
+      .tag-light-mode {
+        background-color: #1c1e21;
+        color: #dadbdd;
+      }
+      main article > .post-date {
+        height: 20px;
+        font-size: 12px;
+        display: flex;
+        justify-content: flex-end;
+      }
+
+      footer {
+        height: 65px;
+        border-top: 1px solid gray;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+
+      .nav-main-tree {
+        margin: 10px 10px;
+      }
+      .nav-main-tree > div {
+        display: inline-block;
+        cursor: pointer;
+      }
+      .nav-main-tree-plus {
+        width: 10px;
+        height: 10px;
+        background-image: url();
+      }
+      .nav-main-tree-minus {
+        width: 10px;
+        height: 10px;
+        background-image: url();
+      }
+      .nav-sub-tree {
+        margin-left: 24px;
+        margin-right: 4px;
+        padding-left: 5px;
+      }
+      .nav-sub-tree > div {
+        margin-top: 3px;
+        background-color: #f8f9fa;
+        border-radius: 3px;
+      }
+      .nav-sub-tree-hidden {
+        display: none;
+      }
+
+      .page-list {
+        height: 40px;
+        width: 280px;
+        font-size: 12px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        align-self: center;
+      }
+      .page-list span {
+        border: 1px solid gray;
+        border-radius: 4px;
+        width: 30px;
+        height: 30px;
+        margin: 2px 2px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+      .page-dark-mode {
+        background-color: #1e2125;
+      }
+      .page-light-mode {
+        color: #fff;
+        background-color: gray;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container dark-mode">
+      <nav class="nav-dark">
+        <ul>
+          <li>
+            <div class="nav-main-tree">
+              <div class="nav-main-tree-plus"></div>
+              <div>메뉴</div>
+            </div>
+            <article class="nav-sub-tree nav-sub-tree-hidden">
+              <div><span>ㄴ</span><span>aaaa</span></div>
+              <div><span>ㄴ</span><span>aaaa</span></div>
+            </article>
+          </li>
+        </ul>
+        <div>
+          <a href="https://coupa.ng/bmYA5y" target="_blank"
+            ><img
+              src="https://ads-partners.coupang.com/banners/117089?subId=&traceId=V0-301-879dd1202e5c73b2-I117089&w=200&h=200"
+              alt=""
+          /></a>
+        </div>
+      </nav>
+      <div class="nav-screen"></div>
+      <header class="header-dark">
+        <div class="header-temp header-temp-dark">
+          <i class="fas fa-circle fa-2x"></i>
+        </div>
+        <div class="header-title"><span>쿠팡마켓</span></div>
+        <div class="header-menu header-menu-dark">
+          <i class="fas fa-bars fa-2x"></i>
+        </div>
+      </header>
+      <main>
+        <div class="main-header">
+          <iframe
+            src="https://coupa.ng/bmX220"
+            width="100%"
+            height="75"
+            frameborder="0"
+            scrolling="no"
+          ></iframe>
+          <div>추천인ID: AF9123011</div>
+        </div>
+        <div class="main-ads">
+          <script src="https://ads-partners.coupang.com/g.js"></script>
+          <script>
+            new PartnersCoupang.G({ id: 116870 });
+          </script>
+        </div>
+        <div class="main-title">최근 글</div>
+        <div class="features">
+          <article class="article-dark-mode">
+            <a href="https://coupa.ng/bmZQUN" target="_blank"
+              ><img
+                src="https://static.coupangcdn.com/image/affiliate/banner/c4de26970855d446aa05d2a9a143f137@2x.jpg"
+                alt="태광선식 옛날 11곡 미숫가루, 2kg, 1개"
+                width="120"
+                height="240"
+            /></a>
+          </article>
+          <article class="article-dark-mode">
+            <a href="https://coupa.ng/bmZUr4" target="_blank"
+              ><img
+                src="https://static.coupangcdn.com/image/affiliate/banner/d3234f537b7f2ddff1a21f0cb677304c@2x.jpg"
+                alt="청정원 카레여왕 인도식마크니커리, 100g, 1개"
+                width="120"
+                height="240"
+            /></a>
+          </article>
+          <!-- <div class="page-list">
+            <span class="page-dark-mode">&lt;&lt;</span>
+            <span class="page-dark-mode">&lt;</span>
+            <span class="page-dark-mode">1</span>
+            <span class="page-dark-mode">2</span>
+            <span class="page-dark-mode">3</span>
+            <span class="page-dark-mode">4</span>
+            ...
+            <span class="page-dark-mode">99</span>
+            <span class="page-dark-mode">&gt;</span>
+            <span class="page-dark-mode">&gt;&gt;</span>
+          </div> -->
+        </div>
+      </main>
+      <footer>
+        해당 상품 포스팅은 2020년01월22일 21시07분에 작성되었으며 쿠팡 파트너스
+        활동으로, 일정액의 커미션을 쿠팡으로 부터 제공받고 있습니다.
+      </footer>
+    </div>
+    <script type="text/javascript">
+      (function() {
+        const btnMenu = document.querySelectorAll(".header-menu")[0]; // 메뉴버튼
+        const navigation = document.querySelectorAll("nav")[0]; //  사이드 메뉴
+        const navScreen = document.querySelectorAll(".nav-screen")[0]; //  화면가림막
+        const darkMode = document.querySelectorAll(".header-temp")[0]; // dark,light 모드버튼
+        const container = document.querySelectorAll(".container")[0]; //  container
+        const header = document.querySelectorAll("header")[0]; //   header
+        const tags = document.querySelectorAll(".tag"); // 태그
+        const postLine = document.querySelectorAll("main article > .post-line");
+        const articles = document.querySelectorAll("main article");
+        const pageList = document.querySelectorAll("main .page-list span");
+        const btnNavMenu = document.querySelectorAll(
+          ".nav-main-tree > div:last-child"
+        );
+
+        Array.prototype.forEach.call(btnNavMenu, function(menu) {
+          menu.addEventListener("click", function() {
+            const menuIcon = menu.previousElementSibling;
+            menuIcon.classList.toggle("nav-main-tree-plus");
+            menuIcon.classList.toggle("nav-main-tree-minus");
+
+            const subTreeMenu = menu.parentElement.nextElementSibling;
+            subTreeMenu.classList.toggle("nav-sub-tree-hidden");
+          });
+        });
+
+        // 메뉴 toggle 함수
+        function menuToggle() {
+          navigation.classList.toggle("nav-visible");
+          navScreen.classList.toggle("nav-screen-visible");
+        }
+
+        // 메뉴버튼 클릭 이벤트
+        btnMenu.addEventListener("click", menuToggle);
+        // 사이드메뉴visible 될때 화면 막는 div클릭 이벤트
+        navScreen.addEventListener("click", menuToggle);
+        // dark,light 모드 전환 함수
+        darkMode.addEventListener("click", function() {
+          btnMenu.classList.toggle("header-menu-dark");
+          btnMenu.classList.toggle("header-menu-light");
+          darkMode.classList.toggle("header-temp-dark");
+          darkMode.classList.toggle("header-temp-light");
+          container.classList.toggle("dark-mode");
+          container.classList.toggle("light-mode");
+          navigation.classList.toggle("nav-dark");
+          navigation.classList.toggle("nav-light");
+          header.classList.toggle("header-dark");
+          header.classList.toggle("header-light");
+
+          Array.prototype.forEach.call(tags, function(tag) {
+            tag.classList.toggle("tag-dark-mode");
+            tag.classList.toggle("tag-light-mode");
+          });
+
+          Array.prototype.forEach.call(postLine, function(line) {
+            line.classList.toggle("post-line-dark-mode");
+            line.classList.toggle("post-line-light-mode");
+          });
+
+          Array.prototype.forEach.call(articles, function(article) {
+            article.classList.toggle("article-dark-mode");
+            article.classList.toggle("article-light-mode");
+          });
+          Array.prototype.forEach.call(pageList, function(page) {
+            page.classList.toggle("page-dark-mode");
+            page.classList.toggle("page-light-mode");
+          });
+        });
+      })();
+    </script>
+  </body>
 </html>
