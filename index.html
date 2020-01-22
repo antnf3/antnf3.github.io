@@ -146,11 +146,18 @@
 			display: flex;
 			align-items: center;
 		}
-		main > article {
+
+                main > .features {
+                        display:flex;
+                        flex-direcion: row;
+                        flex-wrap: wrap;
+                        justify-content: center;
+}
+		main article {
 			margin: 5px 5px;
 			padding: 5px 5px;
 			background-color: transparent;
-
+                        width: 350p;
 		}
                 .article-dark-mode {
                         border-bottom: 1px solid #fff;
@@ -159,12 +166,12 @@
                         border-radius: 4px;
                         box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);       
                 }
-		main > article > .post-title {
+		main article > .post-title {
 			font-size: 20px;
 			font-weight: 700;
 			margin-top: 10px;
 		}
-		main > article > .post-line {
+		main article > .post-line {
 			height: 1px;
 			margin: 20px 0;
 		}
@@ -175,11 +182,11 @@
 			border-bottom: 1px solid #dee2e6;
 		}
 		
-		main >article > .post-desc {
+		main article > .post-desc {
 			font-size: 12px;
 			margin: 20px 0;
 		}
-		main > article > .post-tag {
+		main article > .post-tag {
 			font-size: 10px;
 			display: flex;
 			flex-wrap: wrap;
@@ -197,7 +204,7 @@
 			background-color: #1c1e21;
 			color: #dadbdd;
 		}
-		main > article > .post-date {
+		main article > .post-date {
 			height: 20px;
 			font-size: 12px;
 			display:flex;
@@ -277,6 +284,7 @@
 </script>
 </div>
 			<div class="main-title">최근 글</div>
+                        <div class="features">
 			<article class="article-dark-mode">
 				<div class="post-title">학교종이 땡땡땡</div>
 				<div class="post-line post-line-dark-mode"></div>
@@ -331,6 +339,7 @@
 			<div class="post-tag"><span class="tag">자바스크립트</span><span class="tag">react</span><span class="tag">gh-pages</span></div>
 			<div class="post-date">2020-01-21</div>
 			</article>
+                      </div>
 		</main>
 		<footer>footer</footer>
 	</div>
@@ -343,8 +352,8 @@
 			const container = document.querySelectorAll(".container")[0];	//  container
 			const header  = document.querySelectorAll("header")[0];	//   header
 			const tags = document.querySelectorAll(".tag");	// 태그
-			const postLine = document.querySelectorAll("main > article > .post-line");
-			const articles = document.querySelectorAll("main > article");
+			const postLine = document.querySelectorAll("main article > .post-line");
+			const articles = document.querySelectorAll("main article");
 			const btnNavMenu = document.querySelectorAll(".nav-main-tree > div:last-child");
 			
 			Array.prototype.forEach.call(btnNavMenu, function(menu) {
