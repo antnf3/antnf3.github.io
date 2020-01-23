@@ -163,13 +163,32 @@ body {
         flex-wrap: wrap;
         justify-content: center;
       }
+
       main article {
-        margin: 5px 5px;
-        padding: 5px 5px;
-        background-color: transparent;
-        width: 120px;
-        height: 240px;
-      }
+			margin: 5px 5px;
+			padding: 5px 5px;
+			background-color: transparent;
+			width: 240px;
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+			justify-content: center;
+		}
+		
+		.article-cont {
+			width: 120px;
+			height: 240px;
+		}
+		.article-desc {
+			margin-top: 5px;
+			font-size: 12px;
+		}
+		.article-bold {
+			font-weight: 600;
+		}
+		.article-red {
+			color: red;
+		}
       .article-dark-mode {
         border-bottom: 1px solid #fff;
       }
