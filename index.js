@@ -1,5 +1,14 @@
 
 (function() {
+
+        const btnTransAds = document.getElementById("btnTransAds");
+	const btnClear = document.getElementById("btnClear");
+	const btnClearPre = document.getElementById("btnClearPre");
+        
+        btnTransAds.addEventListener("click", fnGetProps);
+	btnClear.addEventListener("click", fnClearProps);
+	btnClearPre.addEventListener("click", fnClearPreProps);
+		
         const btnMenu = document.querySelectorAll(".header-menu")[0]; // 메뉴버튼
         const navigation = document.querySelectorAll("nav")[0]; //  사이드 메뉴
         const navScreen = document.querySelectorAll(".nav-screen")[0]; //  화면가림막
@@ -145,13 +154,7 @@ function fnAddAds(ads) {
 				return sDate;
 			}
 		}
-const btnTransAds = document.getElementById("btnTransAds");
-		const btnClear = document.getElementById("btnClear");
-		const btnClearPre = document.getElementById("btnClearPre");
 		
-		btnTransAds.addEventListener("click", fnGetProps);
-		btnClear.addEventListener("click", fnClearProps);
-		btnClearPre.addEventListener("click", fnClearPreProps);
 		
 		function fnGetProps() {
 			const txtPreAds = document.getElementById("txtPreAds");
