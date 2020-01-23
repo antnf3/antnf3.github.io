@@ -145,3 +145,55 @@ function fnAddAds(ads) {
 				return sDate;
 			}
 		}
+const btnTransAds = document.getElementById("btnTransAds");
+		const btnClear = document.getElementById("btnClear");
+		const btnClearPre = document.getElementById("btnClearPre");
+		
+		btnTransAds.addEventListener("click", fnGetProps);
+		btnClear.addEventListener("click", fnClearProps);
+		btnClearPre.addEventListener("click", fnClearPreProps);
+		
+		function fnGetProps() {
+			const txtPreAds = document.getElementById("txtPreAds");
+			const txtAfterAds = document.getElementById("txtAfterAds");
+			
+			if (!txtPreAds.value) {
+				return;
+			}
+			
+			const vDom = document.createElement("div");
+			vDom.innerHTML = txtPreAds.value;
+			
+			const {href, target, firstElementChild} = vDom.firstElementChild;
+			const {src, alt, width, height} = firstElementChild;
+			
+			const today = new Date();
+			const tYyyy = today.getFullYear();
+			const tMonth = fnGetLpad(today.getMonth() + 1, 2);
+			const tDay = fnGetLpad(today.getDate(), 2);
+			const tHour = fnGetLpad(today.getHours(), 2);
+			const tMinute = fnGetLpad(today.getMinutes(), 2);
+			const tDate = `${tYyyy}${tMonth}${tDay}${tHour}${tMinute}`
+			
+			const resultVal = `{href: "${href}", src: "${src}", alt: "${alt}", width: "${width}", height: "${height}", date: "${tDate}"}`;
+			txtAfterAds.value = txtAfterAds.value ? `${txtAfterAds.value},\n${resultVal}` : resultVal;
+		}
+		
+		function fnClearProps() {
+			const txtAfterAds = document.getElementById("txtAfterAds");
+			txtAfterAds.value = "";
+		}
+		function fnClearPreProps() {
+			const txtPreAds = document.getElementById("txtPreAds");
+			txtPreAds.value = "";
+		}
+		function fnGetLpad(str, num) {
+			if (typeof str === "number") {
+				str = str.toString();
+			}
+			if (str.length < num) {
+				return fnGetLpad(`0${str}`, num);
+			} else {
+				return str;
+			}
+		}
