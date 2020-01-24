@@ -122,7 +122,7 @@ function fnAddAds(ads) {
 
   const caution = document.createElement("span");
   caution.classList.add("article-red");
-  caution.innerHTML = "일정액의 커미션을 쿠팡으로 부터 제공받고 있습니다.";
+  caution.innerHTML = "일정액의 커미션을 쿠팡으로 부터 제공받을 수 있음.";
 
   const cText1 = document.createTextNode("해당 상품 포스팅은 ");
   const cText2 = document.createTextNode(
