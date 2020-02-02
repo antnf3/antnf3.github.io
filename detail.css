@@ -164,42 +164,29 @@ main > .features {
 }
 
 main article {
-	margin: 5px 5px;
-	padding: 5px 5px;
-	background-color: transparent;
-	width: 340px;
-	display: flex;
-	flex-direction: row;
-	align-items: center;
-	justify-content: center;
+  margin: 5px 5px;
+  padding: 5px 5px;
+  background-color: transparent;
+  width: 340px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
 }
 
-article .article-num {
-	width: 30px;
-	height: 40px;
-	display: flex;
-	align-items: center;
-	justify-content: center;
+.article-cont {
+  width: 120px;
+  height: 240px;
 }
-
-article img {
-	width: 40px;
-	height: 40px;
-	display: flex;
-	align-items: center;
-	justify-content: center;
+.article-desc {
+  margin-top: 5px;
+  font-size: 12px;
 }
-
-article .article-desc {
-	flex: 1;
-	height: 40px;
-	display: flex;
-	align-items: center;
-	padding-left: 5px;
-	overflow: hidden;
-	text-overflow: ellipsis;
-	white-space: nowrap;
-        user-select: none;
+.article-bold {
+  font-weight: 600;
+}
+.article-red {
+  color: red;
 }
 .article-dark-mode {
   border-bottom: 1px solid #fff;
