@@ -1,10 +1,10 @@
 const gSid = getParam("SID");
 const filterAds = arrJson.filter(function(a) {
-	return a.date == gSid;
+  return a.date == gSid;
 });
 
 filterAds.map(function(ads) {
-	fnAddAds(ads);
+  fnAddAds(ads);
 });
 
 function fnAddAds(ads) {
