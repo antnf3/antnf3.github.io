@@ -7,12 +7,12 @@
 module.exports = {
   /* Your site config here */
   siteMetadata: {
-    title: `Delog`,
+    title: `지니의 추천 상품`,
     description: `A starter blog demonstrating what Gatsby can do.`,
     siteUrl: `https://antnf3.github.io/gatsby-test/`,
     home: {
-      title: `Hi! I'm Delog`,
-      description: `I have been specifically designed to become a digital home for designers and developers, help them build amazing professional looking websites with ease. You don't have to worry about nitty gritty of web hosting services to run a blog and yet take full advantage of CMS to manage content :)`,
+      title: `지니의 추천상품 블로그`,
+      description: `지니의 추천상품 블로그입니다.`,
     },
     /* W3Layouts domain verification key for contact forms https://my.w3layouts.com/Forms/ */
     w3l_dom_key: `5e609f7a2d23fCF_Domain_verify`,
@@ -58,5 +58,4 @@ module.exports = {
     `gatsby-plugin-netlify-cms`,
     "gatsby-plugin-dark-mode",
   ],
-  pathPrefix: "/gatsby-test",
 };
