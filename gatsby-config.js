@@ -7,11 +7,11 @@
 module.exports = {
   /* Your site config here */
   siteMetadata: {
-    title: `지니의 추천 상품`,
+    title: `지니 쇼핑`,
     description: `A starter blog demonstrating what Gatsby can do.`,
     siteUrl: `https://antnf3.github.io/gatsby-test/`,
     home: {
-      title: `지니의 추천상품 블로그`,
+      title: `지니의 추천상품`,
       description: `지니의 추천상품 블로그입니다.`,
     },
     /* W3Layouts domain verification key for contact forms https://my.w3layouts.com/Forms/ */
@@ -49,7 +49,7 @@ module.exports = {
       resolve: `gatsby-plugin-google-analytics`,
       options: {
         // The property ID; the tracking code won't be generated without it
-        trackingId: "UA-30027142-1",
+        trackingId: "UA-114684127-2",
         head: true,
       },
     },
