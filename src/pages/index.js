@@ -31,7 +31,7 @@ const IndexPage = ({
       <p align="center">
         <iframe
           src="https://coupa.ng/bnfAsR"
-          width="80%"
+          width="100%"
           height="75"
           frameborder="0"
           scrolling="no"
