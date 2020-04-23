@@ -26,8 +26,11 @@ export default function Template({
             <>
               <div
                 className="post-thumbnail"
-                style={{ backgroundImage: `url(${frontmatter.thumbnail})` }}
+                // style={{ backgroundImage: `url(${frontmatter.thumbnail})` }}
               >
+                <p align="cetner">
+                  <img src={frontmatter.thumbnail} alt={frontmatter.title} />
+                </p>
                 {/* <h1 className="post-title">{frontmatter.title}</h1>
               <div className="post-meta">{frontmatter.date}</div> */}
               </div>

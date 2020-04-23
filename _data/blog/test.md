@@ -1,8 +1,8 @@
 ---
 template: BlogPost
-path: /remark-kitchen-sink
-date: 2020-02-21T12:12:25.364Z
-title: "Hello World: The remark Kitchen Sink"
+path: /test
+date: 2020-04-21 12:12:25
+title: "test"
 thumbnail: https://postfiles.pstatic.net/MjAyMDA0MjJfMjcw/MDAxNTg3NTIwOTg4MjE1.qDfcc_RluTn6jGmPldylxtaIfbIz_uNY479bwjHEq8Ag.ZCdLjWnGPWNg7Sf4gFgdzR1wJLpF9Maukq7wlxcOqVQg.JPEG.dryadsoft/3efbc3d9-c202-4e94-a3b8-0e804c33a3b4.JPG?type=w966
 ---
 

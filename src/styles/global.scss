@@ -169,17 +169,17 @@ a {
   text-align: center;
   min-height: 380px;
   //background-image: url('/assets/circles-light.png');
-  background-color: var(--featured-bg);
+  // background-color: var(--featured-bg);
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
-  border-radius: 18px;
+  border-radius: 5px;
   margin-bottom: 36px;
   color: var(--featured-text);
   display: grid;
   align-content: center;
   position: relative;
-  padding: 18px;
+  // padding: 18px;
   overflow: hidden;
   &:before {
     content: "";
@@ -210,7 +210,7 @@ a {
   display: grid;
   background-color: var(--card-bg);
   border-radius: 9px;
-  border: 1px solid var(--card-bdr);
+  // border: 1px solid var(--card-bdr);
   box-shadow: 0 0 30px var(--card-shadow);
   overflow: hidden;
   line-height: 1.5;
