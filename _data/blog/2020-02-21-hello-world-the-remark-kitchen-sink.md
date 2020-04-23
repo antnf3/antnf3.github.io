@@ -3,7 +3,7 @@ template: BlogPost
 path: /remark-kitchen-sink
 date: 2020-02-21T12:12:25.364Z
 title: "Hello World: The remark Kitchen Sink"
-thumbnail: https://postfiles.pstatic.net/MjAyMDA0MjJfMjcw/MDAxNTg3NTIwOTg4MjE1.qDfcc_RluTn6jGmPldylxtaIfbIz_uNY479bwjHEq8Ag.ZCdLjWnGPWNg7Sf4gFgdzR1wJLpF9Maukq7wlxcOqVQg.JPEG.dryadsoft/3efbc3d9-c202-4e94-a3b8-0e804c33a3b4.JPG?type=w966
+thumbnail: https://static.coupangcdn.com/image/travel_reactor/travelSeller/common/A00200783/1d0fd5b0-78de-4caa-a000-1ca442f65162.jpg
 ---
 
 # h1 Heading 8-)

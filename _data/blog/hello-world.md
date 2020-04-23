@@ -3,7 +3,7 @@ template: BlogPost
 path: /hello-world
 date: 2020-02-20T07:08:53.137Z
 title: Hello World
-thumbnail: ''
+thumbnail: https://static.coupangcdn.com/image/travel_reactor/travelSeller/common/A00200783/1d0fd5b0-78de-4caa-a000-1ca442f65162.jpg
 metaDescription: Meta description for Hello World
 ---
 
