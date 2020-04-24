@@ -12,7 +12,18 @@ export default function Template({
     <Layout>
       <Helmet>
         <title>{frontmatter.title}</title>
+        <meta charset="utf-8" />
         <meta name="description" content={frontmatter.metaDescription} />
+        <meta name="keywords" content={frontmatter.keywords} />
+        <meta name="robots" content="index,follow" />
+        <meta
+          property="og:url"
+          content={`${frontmatter.httpurl}${frontmatter.path}`}
+        />
+        <meta property="og:type" content="website" />
+        <meta property="og:title" content={frontmatter.title} />
+        <meta property="og:description" content={frontmatter.metaDescription} />
+        <meta property="og:image" content={frontmatter.thumbnail} />
       </Helmet>
       <div className="blog-post-container">
         <article className="post">
@@ -57,6 +68,8 @@ export const pageQuery = graphql`
         title
         thumbnail
         metaDescription
+        keywords
+        httpurl
       }
     }
   }

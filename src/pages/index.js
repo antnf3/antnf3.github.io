@@ -38,7 +38,7 @@ const IndexPage = ({
           title="coupangSearch"
         ></iframe>
       </p>
-      <h2>Blog Posts &darr;</h2>
+      <h2>상품 리스트 &darr;</h2>
       <div className="grids">{Posts}</div>
     </Layout>
   );

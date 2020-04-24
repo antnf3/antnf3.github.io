@@ -26,11 +26,11 @@ export default ({ children }) => {
       {children}
       <footer className="site-footer">
         <p>
-          &copy; 2020 Delog &bull; Crafted with{" "}
+          &copy; 2020 지니쇼핑 &bull; Crafted with{" "}
           <span role="img" aria-label="love">
             ❤️
           </span>{" "}
-          by <a href="https://w3layouts.com">W3Layouts</a>
+          by <a href="https://antnf3.github.io">지니</a>
         </p>
       </footer>
     </div>
