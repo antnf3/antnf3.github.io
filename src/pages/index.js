@@ -26,6 +26,10 @@ const IndexPage = ({
             content={site.siteMetadata.w3l_dom_key}
           />
         )}
+        <meta
+          name="naver-site-verification"
+          content="98a9f0c1aa1a0538417426c66824368670e5d489"
+        />
       </Helmet>
       <HeroHeader />
       <p align="center">
