@@ -26,6 +26,16 @@ const IndexPage = ({
             content={site.siteMetadata.w3l_dom_key}
           />
         )}
+
+        <meta name="keywords" content="쇼핑,쿠팡,상품,제품" />
+        <meta name="robots" content="index,follow" />
+        <meta property="og:url" content="https://antnf3.github.io" />
+        <meta property="og:type" content="website" />
+        <meta property="og:title" content="지니 쇼핑" />
+        <meta
+          property="og:description"
+          content={site.siteMetadata.description}
+        />
       </Helmet>
       <HeroHeader />
       <p align="center">

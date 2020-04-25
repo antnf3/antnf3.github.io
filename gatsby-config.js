@@ -8,11 +8,11 @@ module.exports = {
   /* Your site config here */
   siteMetadata: {
     title: `지니 쇼핑`,
-    description: `A starter blog demonstrating what Gatsby can do.`,
+    description: `지니쇼핑, 추천상품, 쿠팡상품 구매, 쿠팡 파트너스, 상품`,
     siteUrl: `https://antnf3.github.io`,
     home: {
       title: `지니의 추천상품`,
-      description: `안녕하세요! 지니쇼핑입니다. 지니쇼핑은 쿠팡의 상품정보를 전문적으로 제공하는 사이트 입니다.지니쇼핑은 쿠팡 파트너스 활동으로, 일정액의 커미션을 쿠팡으로 부터 제공 받을 수 있습니다. 감사합니다. 즐거운쇼핑 되세요~`,
+      description: `안녕하세요! 지니쇼핑입니다. 쿠팡의 상품정보를 전문적으로 제공하는 사이트 입니다.지니쇼핑은 쿠팡 파트너스 활동으로, 일정액의 커미션을 쿠팡으로 부터 제공 받을 수 있습니다. 감사합니다. 즐거운쇼핑 되세요~`,
     },
     /* W3Layouts domain verification key for contact forms https://my.w3layouts.com/Forms/ */
     w3l_dom_key: `5e609f7a2d23fCF_Domain_verify`,
