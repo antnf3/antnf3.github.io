@@ -104,7 +104,10 @@ module.exports = {
           {
             site {
               siteMetadata {
+                title
+                description
                 siteUrl
+                site_url: siteUrl
               }
             }
           }
@@ -125,7 +128,7 @@ module.exports = {
             query: `
               {
                 allMarkdownRemark(
-                  limit: 1000,
+                  limit: 179,
                   sort: { order: DESC, fields: [frontmatter___date] }
                 ) {
                   edges {
@@ -145,6 +148,7 @@ module.exports = {
             `,
             output: "/rss.xml",
             title: "지니쇼핑 RSS Feed",
+            link: "https://antnf3.github.io",
           },
         ],
       },
